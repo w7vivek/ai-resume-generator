@@ -405,7 +405,7 @@ Focus on measurable impact, clarity, and keywords for software developer roles.
 
       // ----- Call Node + OpenRouter backend -----
       // const res = await fetch("http://localhost:4000/api/summary", {
-      const res = await fetch("https://ai-resume-backend.onrender.com/api/summary", {
+      const res = await fetch("https://ai-resume-generator-0upy.onrender.com/api/summary", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ prompt }),
