@@ -1,0 +1,247 @@
+:root {
+    --primary: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+    --secondary: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+    --success: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    --bg-main: linear-gradient(145deg, #fef7ff 0%, #f0f9ff 50%, #f0fdf4 100%);
+    --shadow-3d: 0 25px 50px rgba(0,0,0,0.12);
+    --shadow-glow: 0 0 40px rgba(99, 102, 241, 0.4);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { 
+    scroll-behavior: smooth; 
+    scroll-padding-top: 80px; 
+}
+body { 
+    font-family: 'Inter', system-ui, sans-serif; 
+    overflow: hidden; 
+}
+
+.parent {
+    display: grid;
+    grid-template-areas: "nav nav" "sidebar content";
+    grid-template-columns: 320px 1fr;
+    grid-template-rows: 80px 1fr;
+    height: 100vh;
+    /* background: var(--bg-main); */
+}
+
+.div1 { 
+    grid-area: nav; 
+    background: rgba(255,255,255,0.9); 
+    backdrop-filter: blur(30px); 
+    border-bottom: 1px solid rgba(255,255,255,0.5); 
+    box-shadow: var(--shadow-3d);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.div1 .navbar { padding: 1rem 2rem !important; }
+.navbar-brand { 
+    font-size: 1.8rem; 
+    font-weight: 900; 
+    background: var(--primary); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    background-clip: text; 
+}
+
+.div2 { 
+    grid-area: sidebar; 
+    padding: 3rem 2rem;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(30px);
+    border-right: 2px solid rgba(99, 102, 241, 0.2);
+    box-shadow: var(--shadow-3d);
+    position: relative;
+    overflow-y: auto;
+}
+.div2::before { 
+    content: ''; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    height: 6px; 
+    background: var(--primary); 
+    border-radius: 0 0 20px 20px; 
+    box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4); 
+}
+
+#list-example .list-group-item {
+    margin-bottom: 1rem;
+    border: none !important;
+    border-radius: 24px;
+    background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+    color: #374151 !important;
+    font-weight: 700;
+    font-size: 1.05rem;
+    padding: 1.5rem 2rem;
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: visible !important;
+    cursor: pointer !important;
+    text-decoration: none;
+}
+
+#list-example .list-group-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent 0%, rgba(99, 102, 241, 0.15) 50%, var(--primary) 100%);
+    transition: all 0.6s ease;
+    z-index: 1;
+}
+
+#list-example .list-group-item:hover::before,
+#list-example .list-group-item.active::before {
+    left: 0;
+}
+
+#list-example .list-group-item:hover,
+#list-example .list-group-item.active {
+    transform: translateX(20px) scale(1.05);
+    color: rgba(0,0,0,0.08);
+    box-shadow: 0 30px 60px rgba(99, 102, 241, 0.4);
+}
+
+.div3 { 
+    grid-area: content; 
+    padding: 4rem 3rem; 
+    overflow-y: auto; 
+    background: rgba(255,255,255,0.88); 
+    backdrop-filter: blur(30px);
+    scroll-padding-top: 80px;
+}
+
+section {
+    scroll-margin-top: 100px;
+}
+section h4 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    background: var(--primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 3rem;
+    position: relative;
+    padding-bottom: 2rem;
+}
+section h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 120px;
+    height: 8px;
+    background: var(--primary);
+    border-radius: 10px;
+    box-shadow: var(--shadow-glow);
+}
+
+.form-label { 
+    font-weight: 800; 
+    color: #1f2937; 
+    font-size: 0.9rem; 
+    margin-bottom: 1.25rem; 
+    letter-spacing: 0.5px; 
+    text-transform: uppercase; 
+}
+
+.form-control, .form-select {
+    background: rgba(255,255,255,1) !important;
+    border: 3px solid #f3f4f6 !important;
+    border-radius: 20px;
+    color: #1f2937;
+    font-weight: 600;
+    padding: 1.5rem 1.75rem;
+    font-size: 1.1rem;
+    height: 68px !important;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    transition: all 0.4s ease;
+}
+.form-control::placeholder { color: #9ca3af; font-weight: 500; }
+.form-control:focus, .form-select:focus { 
+    border-color: #6366f1 !important; 
+    box-shadow: 0 0 0 0.4rem rgba(99,102,241,0.2), var(--shadow-glow) !important; 
+    transform: translateY(-4px); 
+}
+
+.border {
+    background: rgba(255,255,255,0.98) !important;
+    backdrop-filter: blur(30px);
+    border: 2px solid rgba(99,102,241,0.1) !important;
+    border-radius: 32px;
+    box-shadow: var(--shadow-3d);
+    padding: 3rem !important;
+    transition: all 0.4s ease;
+}
+.border:hover { 
+    transform: translateY(-10px); 
+    box-shadow: 0 40px 80px rgba(0,0,0,0.15); 
+}
+
+#list-item-6 .form-control {
+    min-height: 250px !important;
+    height: 300px !important;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.8;
+    resize: vertical;
+    padding: 2.5rem !important;
+    font-family: 'Georgia', serif;
+}
+
+.btn-success {
+    background: var(--success) !important;
+    border: none !important;
+    border-radius: 25px;
+    padding: 1.75rem 4rem;
+    font-size: 1.3rem;
+    font-weight: 900;
+    box-shadow: 0 20px 40px rgba(16,185,129,0.4);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 2rem;
+}
+.btn-success:hover { 
+    transform: translateY(-8px) scale(1.08); 
+    box-shadow: 0 35px 70px rgba(16,185,129,0.5); 
+}
+
+.div3::-webkit-scrollbar { width: 12px; }
+.div3::-webkit-scrollbar-thumb { 
+    background: var(--primary); 
+    border-radius: 20px; 
+}
+#downloadPdfBtn {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    border: none;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+#downloadPdfBtn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(16, 185, 129, 0.4);
+}
+
+#downloadPdfBtn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+
+@media (max-width: 768px) {
+    .parent { 
+        grid-template-columns: 1fr; 
+        grid-template-areas: "nav" "sidebar" "content"; 
+    }
+    .div3 { padding: 2rem; }
+    #list-item-6 .form-control { height: 200px !important; }
+}
