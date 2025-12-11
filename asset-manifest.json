@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/ai-resume-generator/static/css/main.79d9a476.css",
-    "main.js": "/ai-resume-generator/static/js/main.1f3507a4.js",
+    "main.js": "/ai-resume-generator/static/js/main.6bbebc85.js",
     "static/js/977.9a5f03aa.chunk.js": "/ai-resume-generator/static/js/977.9a5f03aa.chunk.js",
     "static/js/455.8ea824a1.chunk.js": "/ai-resume-generator/static/js/455.8ea824a1.chunk.js",
     "static/js/453.08ebdcad.chunk.js": "/ai-resume-generator/static/js/453.08ebdcad.chunk.js",
     "index.html": "/ai-resume-generator/index.html",
     "main.79d9a476.css.map": "/ai-resume-generator/static/css/main.79d9a476.css.map",
-    "main.1f3507a4.js.map": "/ai-resume-generator/static/js/main.1f3507a4.js.map",
+    "main.6bbebc85.js.map": "/ai-resume-generator/static/js/main.6bbebc85.js.map",
     "977.9a5f03aa.chunk.js.map": "/ai-resume-generator/static/js/977.9a5f03aa.chunk.js.map",
     "455.8ea824a1.chunk.js.map": "/ai-resume-generator/static/js/455.8ea824a1.chunk.js.map",
     "453.08ebdcad.chunk.js.map": "/ai-resume-generator/static/js/453.08ebdcad.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.79d9a476.css",
-    "static/js/main.1f3507a4.js"
+    "static/js/main.6bbebc85.js"
   ]
 }
