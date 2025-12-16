@@ -1,3 +1,5 @@
+// Index.jsx
+
 import React from "react";
 import "../styles/index.css";
 import"../js/mainLogic.js";
@@ -7,20 +9,6 @@ import { setupIndexPageLogic } from "../js/mainLogic.js";
 export function Index() {
   return (
     <>
-      {/* Favicon */}
-      <link rel="icon" type="image/png" href="logo.jfif" />
-
-      {/* PDF Libraries */}
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-
-      {/* Bootstrap */}
-      <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-      />
-
       {/* Custom CSS */}
       <link rel="stylesheet" href="/index.css" />
 
@@ -29,7 +17,7 @@ export function Index() {
         <div className="div1">
           <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container-fluid">
-              <Link className="navbar-brand fw-bold" href="#">
+              <Link className="navbar-brand fw-bold" to="/ai-resume-generator">
                 AI Resume Generator
               </Link>
               <button
@@ -47,13 +35,13 @@ export function Index() {
               <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                   <li className="nav-item">
-                    <a
-                      href="/About"
+                    <Link
+                      to="/ai-resume-generator/about"
                       className="list-group-item list-group-item-action"
-                      target="_blank"
+
                     >
                       About Us
-                    </a>
+                    </Link>
                   </li>
                   <li className="nav-item">
                     <h2 className="nav-link disabled">USE AI Summary</h2>
@@ -299,9 +287,6 @@ export function Index() {
         </div>
       </div>
 
-      {/* Bootstrap JS */}
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-      <script src="/extra_js.js"></script>
     </>
   );
 }

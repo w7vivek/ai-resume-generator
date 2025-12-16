@@ -1,3 +1,5 @@
+// About.jsx
+
 import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/about.css";
@@ -8,14 +10,14 @@ const About = () => {
       {/* Top nav */}
       <header className="about-nav">
         <div className="about-nav-inner">
-          <Link to="/" className="about-logo">
+          <Link to="/ai-resume-generator" className="about-logo">
             AI Resume Generator
           </Link>
           <nav className="about-links">
-            <Link to="/" className="about-link">
+            <Link to="/ai-resume-generator" className="about-link">
               Resume Builder
             </Link>
-            <Link to="/about" className="about-link active">
+            <Link to="/ai-resume-generator/about" className="about-link active">
               About
             </Link>
           </nav>
@@ -31,7 +33,7 @@ const About = () => {
             tailored resume summaries and bullet points in seconds using
             AI, so they can focus on applying instead of formatting.[web:22][web:26]
           </p>
-          <Link to="/" className="about-cta">
+          <Link to="/ai-resume-generator" className="about-cta">
             Start Building Your Resume
           </Link>
         </div>
