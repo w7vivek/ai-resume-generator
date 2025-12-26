@@ -1,6 +1,6 @@
 {
   "name": "ai-resume-generator",
-  "homepage": "https://w7vivek.github.io/ai-resume-generator",
+  "homepage": "https://w7vivek.github.io/ai-resume-generator/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
