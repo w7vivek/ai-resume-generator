@@ -24,7 +24,7 @@ import About from "./components/About";
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Index />} />
+      <Route path="/ai-resume-generator" element={<Index />} />
       <Route path="/ai-resume-generator/about" element={<About />} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
