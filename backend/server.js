@@ -3,7 +3,12 @@ import cors from "cors";
 import fetch from "node-fetch";
 
 const app = express();
-app.use(cors({ origin: "http://localhost:3000" }));
+app.use(cors({
+  origin: [
+    "http://localhost:3000",
+    "https://w7vivek.github.io"
+  ]
+}));
 app.use(express.json());
 
 const OR_API_KEY = process.env.OR_API_KEY;
