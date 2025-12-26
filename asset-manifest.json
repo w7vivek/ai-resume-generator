@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/ai-resume-generator/static/css/main.0453a397.css",
-    "main.js": "/ai-resume-generator/static/js/main.c90dde13.js",
+    "main.js": "/ai-resume-generator/static/js/main.071eae66.js",
     "static/js/977.44e2322c.chunk.js": "/ai-resume-generator/static/js/977.44e2322c.chunk.js",
     "static/js/455.09b43c97.chunk.js": "/ai-resume-generator/static/js/455.09b43c97.chunk.js",
     "index.html": "/ai-resume-generator/index.html",
     "main.0453a397.css.map": "/ai-resume-generator/static/css/main.0453a397.css.map",
-    "main.c90dde13.js.map": "/ai-resume-generator/static/js/main.c90dde13.js.map",
+    "main.071eae66.js.map": "/ai-resume-generator/static/js/main.071eae66.js.map",
     "977.44e2322c.chunk.js.map": "/ai-resume-generator/static/js/977.44e2322c.chunk.js.map",
     "455.09b43c97.chunk.js.map": "/ai-resume-generator/static/js/455.09b43c97.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0453a397.css",
-    "static/js/main.c90dde13.js"
+    "static/js/main.071eae66.js"
   ]
 }
